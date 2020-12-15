@@ -1,0 +1,28 @@
+
+
+<body>
+
+    <table>
+       
+        <button><a href="/create">Create New</a></button>
+        <tr>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Update</th>
+            <th>Delete</th>
+        </tr>
+
+        <% for(var i = 0; i < tasks.length; i++) {%>
+            <tr> 
+                <td><%= tasks[i].title%></td>
+                <td><%= tasks[i].body%></td>
+                <td><a href="/update/<%=tasks[i].id%>">Update</a></td>
+                <td><a href="/delete/<%=tasks[i].id%>">Delete</a></td>
+            </tr> 
+
+
+          <% } %>
+    
+        </table>
+   
+</body>
